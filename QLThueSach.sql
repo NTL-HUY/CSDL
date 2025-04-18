@@ -43,10 +43,11 @@ create table THUESACH(
 	NgayTra datetime,
 	TienThue money,
 	GhiChu nvarchar(max),
-	primary key(MaKH, MaSach),
+	primary key(MaKH, MaSach,NgayMuon),
 	constraint fk_thuesach_sach foreign key(MaSach) references SACH(MaSach)
 		on update cascade,
 	constraint fk_thuesach_khachhang foreign key(MaKH) references KHACHHANG(MaKH)
 		on update cascade
 );
 go
+
